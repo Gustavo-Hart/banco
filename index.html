@@ -1,138 +1,47 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aplicação de Conta Bancária</title>
+    <title>Nubranco</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<div class="container">
-    <h1>Aplicação de Conta Bancária</h1>
-
-    <div>
-        <h2>Criar Nova Conta</h2>
-        <input type="text" id="titular" placeholder="Nome do titular" required>
-        <input type="number" id="saldoInicial" placeholder="Saldo inicial" required>
-        <button onclick="criarConta()">Criar Conta</button>
+    <div id="topo">
+        
+        <a href="banco.html"> <img src="banco.png.png" alt="" class="bancopng"
+        ></a>
+        
+        
     </div>
+    <div id="conta">
+        <div>conta
+            
+        </div>
+        
 
-    <div>
-        <h2>Depositar</h2>
-        <input type="number" id="numeroContaDeposito" placeholder="Número da conta" required>
-        <input type="number" id="valorDeposito" placeholder="Valor a depositar" required>
-        <button onclick="depositar()">Depositar</button>
     </div>
-
-    <div>
-        <h2>Sacar</h2>
-        <input type="number" id="numeroContaSaque" placeholder="Número da conta" required>
-        <input type="number" id="valorSaque" placeholder="Valor a sacar" required>
-        <button onclick="sacar()">Sacar</button>
+    <div id="">
+        <a href=""> <img src="pix.icon.png.png" alt="" id="funcao"></a>
+        <a href=""> <img src="pagar.png.png" alt="" id="funcao"></a>
+        <a href=""> <img src="celular.png.png" alt="" id="funcao"></a>
+        <a href=""> <img src="troca-de-dinheiro.png.png" alt="" id="funcao"></a>
+        <a href=""> <img src="deposito.png.png" alt="" id="funcao"></a>
+        <a href=""> <img src="investimento.png.png" alt="" id="funcao"></a>
     </div>
-
-    <div>
-        <h2>Consultar Saldo</h2>
-        <input type="number" id="numeroContaConsulta" placeholder="Número da conta" required>
-        <button onclick="consultarSaldo()">Consultar Saldo</button>
+    <div class="box">
+        <a href=""> <img src="cartao.png.png" alt="" class="image"></a>
+       <span class="text">Cartõens</span>
     </div>
+    <hr>
 
-    <div>
-        <h2>Listar Contas</h2>
-        <button onclick="listarContas()">Listar Todas as Contas</button>
-    </div>
-
-    <div class="message" id="message"></div>
-</div>
-
-<script>
-    class ContaBancaria {
-        static contas = [];
-        static contadorContas = 1;
-
-        constructor(titular, saldoInicial) {
-            this.titular = titular;
-            this.saldo = saldoInicial;
-            this.numeroConta = ContaBancaria.contadorContas++;
-            ContaBancaria.contas.push(this);
-        }
-
-        deposito(valor) {
-            this.saldo += valor;
-        }
-
-        saque(valor) {
-            if (valor > this.saldo) {
-                return 'Saldo Insuficiente';
-            }
-            this.saldo -= valor;
-            return 'Saque realizado com sucesso!';
-        }
-
-        consultarSaldo() {
-            return `Saldo atual: ${this.saldo}`;
-        }
-
-        static getContaPorNumero(numeroConta) {
-            return ContaBancaria.contas.find(conta => conta.numeroConta === numeroConta);
-        }
-
-        static listarContas() {
-            return ContaBancaria.contas.map(conta => `Código da conta: ${conta.numeroConta}, Titular: ${conta.titular}, Saldo: ${conta.saldo}`).join('<br>');
-        }
-    }
-
-    function mostrarMensagem(msg) {
-        document.getElementById('message').innerHTML = msg;
-    }
-
-    function criarConta() {
-        const titular = document.getElementById('titular').value;
-        const saldoInicial = parseFloat(document.getElementById('saldoInicial').value);
-        new ContaBancaria(titular, saldoInicial);
-        mostrarMensagem(`Conta criada com sucesso! Nome: ${titular}`);
-    }
-
-    function depositar() {
-        const numero = parseInt(document.getElementById('numeroContaDeposito').value);
-        const valor = parseFloat(document.getElementById('valorDeposito').value);
-        const conta = ContaBancaria.getContaPorNumero(numero);
-        if (conta) {
-            conta.deposito(valor);
-            mostrarMensagem(`Depósito de ${valor} realizado com sucesso!`);
-        } else {
-            mostrarMensagem('Conta não encontrada.');
-        }
-    }
-
-    function sacar() {
-        const numero = parseInt(document.getElementById('numeroContaSaque').value);
-        const valor = parseFloat(document.getElementById('valorSaque').value);
-        const conta = ContaBancaria.getContaPorNumero(numero);
-        if (conta) {
-            const resultado = conta.saque(valor);
-            mostrarMensagem(resultado);
-        } else {
-            mostrarMensagem('Conta não encontrada.');
-        }
-    }
-
-    function consultarSaldo() {
-        const numero = parseInt(document.getElementById('numeroContaConsulta').value);
-        const conta = ContaBancaria.getContaPorNumero(numero);
-        if (conta) {
-            mostrarMensagem(conta.consultarSaldo());
-        } else {
-            mostrarMensagem('Conta não encontrada.');
-        }
-    }
-
-    function listarContas() {
-        const contas = ContaBancaria.listarContas();
-        mostrarMensagem(contas.length ? contas : 'Nenhuma conta cadastrada.');
-    }
-</script>
+    <div> Cartão de Credito</div>
+    <hr>
+    <div>Empréstimo</div>
+    <hr>
+    <div>Proximos 7 dias</div>
+    <hr>
+    <div>Descubra mais</div>
 
 </body>
 </html>
