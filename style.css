@@ -1,63 +1,170 @@
-body{
-
-}
+body {}
 
 #topo {
     background-color: #8a2be2;
     padding: 60px;
 }
-.bancopng{
+
+.bancopng {
     width: 40px;
-    height: 40px;    
+    height: 40px;
 }
- #topo img{
+
+#topo img {
     align-items: center;
- }
- #funcao{
-   margin-top: 60px;
+}
+
+#funcao {
+    margin-top: 60px;
     height: 60px;
-   width: 60px;
- }
- #funcao:hover{
+    width: 60px;
+}
+
+#funcao:hover {
     transition: 500ms;
     transform: scale(1.2);
- }
- #cartao{
+}
+
+#cartao {
     width: 60px;
     height: 60px;
     background-color: #f0f0f0;
     box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.5);
     margin-top: 20px;
 
- }
-#cartao:hover{
+}
+
+#cartao:hover {
     transform: scale(1.1);
     transition: 500ms;
-    background-color:rgb(246, 239, 239) ;
+    background-color: rgb(246, 239, 239);
 }
-#pngbranco{
+
+#pngbranco {
     width: 40px;
     height: 40px;
 }
-.box{
-    display: flex; /* Usar flexbox para alinhar imagem e texto */
-    align-items: center; /* Centralizar verticalmente */
-    padding: 20px; /* Espaço interno */
-    background-color: #fff; /* Cor de fundo da caixa */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
-    border-radius: 10px; /* Bordas arredondadas */
+
+.box {
+    display: flex;
+    /* Usar flexbox para alinhar imagem e texto */
+    align-items: center;
+    /* Centralizar verticalmente */
+    padding: 20px;
+    /* Espaço interno */
+    background-color: #fff;
+    /* Cor de fundo da caixa */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra */
+    border-radius: 10px;
+    /* Bordas arredondadas */
     margin-top: 40px;
 }
-.image{
-        width: 50px; /* Ajuste o tamanho da imagem */
-        height: auto; /* Mantém a proporção da imagem */
-        margin-right: 10px; /* Espaço entre a imagem e o texto */
+
+.image {
+    width: 50px;
+    /* Ajuste o tamanho da imagem */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    margin-right: 10px;
+    /* Espaço entre a imagem e o texto */
 }
-.box:hover{
+
+.box:hover {
     transition: 500ms;
     background-color: rgb(230, 226, 226);
 }
-#imagens:hover{
+
+#imagens:hover {
     transition: 500ms;
     background-color: #cf3939;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #8a2be2;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 10px 0;
+}
+
+h2 {
+    color: #333;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background: #0056b3;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #218838;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #8a2be2;
+    color: #fff;
 }
