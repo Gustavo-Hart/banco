@@ -35,7 +35,36 @@
         <p>&copy; 2024 Banco Exemplo. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="script.js"></script>
-</body>
+    <script>
+        // Inicializa o saldo
+        let saldo = 0;
+
+        // Seleciona o formulário e os elementos de saldo e resultado
+        const form = document.getElementById('depositoForm');
+        const resultado = document.getElementById('resultado');
+        const saldoElemento = document.getElementById('saldo');
+
+        // Adiciona um evento de submit ao formulário
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Previne o envio padrão do formulário
+
+            // Obtém o valor do depósito
+            const valorDeposito = parseFloat(document.getElementById('valor').value);
+
+            // Atualiza o saldo
+            saldo += valorDeposito;
+
+            // Exibe a mensagem de sucesso
+            resultado.innerHTML = `Depósito de R$ ${valorDeposito.toFixed(2)} realizado com sucesso!`;
+            resultado.style.color = 'green'; // Muda a cor  do texto para verde
+
+            // Atualiza o saldo exibido
+            saldoElemento.textContent = saldo.toFixed(2);
+
+            // Limpa o campo de entrada
+            form.reset();
+        });
+    </script>
+    </body>
 
 </html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pagar Contas e Boletos</title>
+</head>
+
+<body>
+    <header>
+        <h1>Pagar Contas e Boletos</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#introducao">Introdução</a></li>
+                <li><a href="#como-usar">Como Usar</a></li>
+                <li><a href="#vantagens">Vantagens</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="pagar-contas">
+        <h2>Realizar Pagamento</h2>
+        <form id="pagamentoForm">
+            <label for="codigo">Código de Barras:</label>
+            <input type="text" id="codigo" name="codigo" required>
+
+            <label for="valor">Valor da Conta:</label>
+            <input type="number" id="valor" name="valor" required min="1">
+
+            <button type="submit">Pagar</button>
+        </form>
+        <div id="resultado"></div>
+    </section>
+
+    <section id="introducao">
+        <h2>Introdução ao Pagamento de Contas</h2>
+        <p>O pagamento de contas e boletos é uma forma prática e segura de manter suas obrigações financeiras em dia. Com a digitalização, você pode realizar esses pagamentos a qualquer hora e em qualquer lugar.</p>
+    </section>
+
+    <section id="vantagens">
+        <h2>Vantagens de Pagar Contas Online</h2>
+        <ul>
+            <li>Comodidade de pagar de casa.</li>
+            <li>Evita filas e esperas.</li>
+            <li>Histórico de pagamentos acessível.</li>
+            <li>Facilidade de agendamento de pagamentos futuros.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Informações sobre Pagamento de Contas. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
