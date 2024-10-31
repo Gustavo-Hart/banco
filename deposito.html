@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Nova pasta/scripts/script_deposito_conta1.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <title>Simulação de Depósito</title>
 </head>
@@ -23,10 +24,10 @@
     <section id="deposito">
         <h2>Realizar um Depósito</h2>
         <form id="depositoForm">
-            <label for="valor">Valor do Depósito:</label>
-            <input type="number" id="valor" name="valor" required min="1">
+            <label for="input-deposito">Valor do Depósito:</label>
+            <input type="number" id="input-deposito" name="valor" required min="1">
 
-            <button type="submit">Depositar</button>
+            <button id="btnDeposito" type="submit">Depositar</button>
         </form>
         <div id="resultado"></div>
     </section>
@@ -35,36 +36,7 @@
         <p>&copy; 2024 Banco Exemplo. Todos os direitos reservados.</p>
     </footer>
 
-    <script>
-        // Inicializa o saldo
-        let saldo = 0;
-
-        // Seleciona o formulário e os elementos de saldo e resultado
-        const form = document.getElementById('depositoForm');
-        const resultado = document.getElementById('resultado');
-        const saldoElemento = document.getElementById('saldo');
-
-        // Adiciona um evento de submit ao formulário
-        form.addEventListener('submit', function(event) {
-            event.preventDefault(); // Previne o envio padrão do formulário
-
-            // Obtém o valor do depósito
-            const valorDeposito = parseFloat(document.getElementById('valor').value);
-
-            // Atualiza o saldo
-            saldo += valorDeposito;
-
-            // Exibe a mensagem de sucesso
-            resultado.innerHTML = `Depósito de R$ ${valorDeposito.toFixed(2)} realizado com sucesso!`;
-            resultado.style.color = 'green'; // Muda a cor  do texto para verde
-
-            // Atualiza o saldo exibido
-            saldoElemento.textContent = saldo.toFixed(2);
-
-            // Limpa o campo de entrada
-            form.reset();
-        });
-    </script>
+    
     </body>
 
 </html>
