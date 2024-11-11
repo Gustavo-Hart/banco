@@ -8,9 +8,9 @@ bttdeposito.addEventListener('click', deposito);
 function deposito(){
 
     const valorDeposito = document.getElementById('input-deposito').value;
-    //const xDeposito = valorDeposito
+    alert(valorDeposito);
     localStorage.setItem("entradaDeposito", valorDeposito);
-    console.log(valorDeposito);
+    
 
    
     

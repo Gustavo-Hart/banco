@@ -4,60 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nubranco</title>
+    <title>Login - Nubranco</title>
     <link rel="stylesheet" href="style.css">
+    <script src="scripts/script_confName_conta1.js" defer></script>
 </head>
 
 <body>
+    <!-- Topo da página com logo -->
     <div id="topo">
-
-        <a href="banco.html"> <img src="banco.png.png" alt="" class="bancopng"></a>
-
-
+        <a href="inicio.html"> 
+            <img src="banco.png.png" alt="Logo Nubranco" class="bancopng">
+        </a>
     </div>
-    <div id="conta">
-        <p id="saldo">0.00
 
-        </p>
+    <!-- Formulário de login -->
+    <div id="login-box">
+        <h2>Login</h2>
+        <form action="dashboard.html" method="POST">
+            <div class="input-group">
+                <input type="text" id="senha">
+            </div>
+            <button type="button" id="btt-confirmar">Entrar</button>
+        </form>
 
-
+        <!-- Links para recuperar senha e criar nova conta -->
+        <div class="links">
+            <a href="recuperar-senha.html">Esqueci minha senha</a>
+            <a href="criar-conta.html">Criar nova conta</a>
+        </div>
     </div>
-    <div id="">
-        <a href="pix.html"> <img src="pix.icon.png.png" alt="" id="funcao"></a>
-        <a href="pagar.html"> <img src="pagar.png.png" alt="" id="funcao"></a>
-        <a href="recarga.html"> <img src="celular.png.png" alt="" id="funcao"></a>
-        <a href="deposito.html"> <img src="troca-de-dinheiro.png.png" alt="" id="funcao"></a>
-        <a href="investimento.html"> <img src="investimento.png.png" alt="" id="funcao"></a>
-    </div>
-    <div class="box">
-        <a href=""> <img src="cartao.png.png" alt="" class="image"></a>
-        <span class="text">Cartõens</span>
-    </div>
-    <hr>
 
-    <section class="financas">
-        <h2>Opções Financeiras</h2>
-        <ul>
-            <li>
-                <div class="opcao">Cartão de Crédito</div>
-                <hr>
-            </li>
-            <li>
-                <div class="opcao">Empréstimo</div>
-                <hr>
-            </li>
-            <li>
-                <div class="opcao">Próximos 7 Dias</div>
-                <hr>
-            </li>
-            <li>
-                <div class="opcao">Descubra Mais</div>
-                <hr>
-            </li>
-        </ul>
-    </section>
-    
- <script src="script_conta.js"></script>
 </body>
 
 </html>
